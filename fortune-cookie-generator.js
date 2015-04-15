@@ -9,6 +9,7 @@ var generateFortuneCookie = function() {
 	// Grab the fortune cookie paragraph
 	var theFortune = document.getElementById('fortune-cookie-text');
 	
+	// Create new 'li' element and append to previous UL list
 	if (theFortune.innerText !== 'Click the button to generate a saying.') {
 		// Create new 'li' element to append
 		var newListItem = document.createElement('li');
