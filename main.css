@@ -11,3 +11,7 @@ html {
     padding: 1em;
     margin: 1em;
 }
+
+#previous-fortunes-container {
+    list-style-type: none;
+}
