@@ -8,13 +8,17 @@ var generateFortuneCookie = function() {
     
 	// Grab the fortune cookie paragraph
 	var theFortune = document.getElementById('fortune-cookie-text');
-	// Create new 'li' element to append
-	var newListItem = document.createElement('li');
-	newListItem.innerText = theFortune.innerText;
-	// Grab the Previous List UL and append new li
-	var previousList = document.getElementById('previous-fortunes-container');
-	previousList.appendChild(newListItem);
 	
+	if (theFortune.innerText === 'Click the button to generate a saying.'){
+		break;
+	}else{
+		// Create new 'li' element to append
+		var newListItem = document.createElement('li');
+		newListItem.innerText = theFortune.innerText;
+		// Grab the Previous List UL and append new li
+		var previousList = document.getElementById('previous-fortunes-container');
+		previousList.appendChild(newListItem);
+	}
 	
 	// Grab random fortune from array
 	var newCookie = fortunesList[Math.floor(Math.random() * fortunesList.length)];
