@@ -5,7 +5,25 @@
 //////////////////////////////////////////
 
 var generateFortuneCookie = function() {
-    // This is where your code for the Fortune Cookie generator goes.
+    
+	// <string> Grab random fortune from array
+	var newCookie = fortunesList[Math.floor(Math.random() * fortunesList.length)];
+	// <p> Grab the fortune cookie paragraph
+	var theFortune = document.getElementById('fortune-cookie-text');
+	// change fortune text 
+	theFortune.textContent = newCookie;
+	
+	// <li> Create new 'li' element to append
+	var newListItem = document.createElement('li');
+	newListItem.innerText = newCookie;
+	
+	// <ul> Grab the Previous List UL and append new li
+	var previousList = document.getElementById('previous-fortunes-container');
+	previousList.appendChild(newListItem);
+	
+	
+	
+	// This is where your code for the Fortune Cookie generator goes.
     // You will use the fortunesList variable defined lower in this file
     // to supply your fortune cookies with text.
 
