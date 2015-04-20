@@ -28,6 +28,10 @@ var generateFortuneCookie = function() {
 
 }
 
+function play() {
+	var audio = document.getElementsByClassName('click-playlist')
+	audio[Math.floor(Math.random() * audio.length)].play();
+}
 // The following data list is provided for you to use in your code.
 var fortunesList = [
     "People are naturally attracted to you.",
